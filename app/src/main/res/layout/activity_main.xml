@@ -11,6 +11,41 @@
             android:text="불러오기"
             android:id="@+id/button" />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="임신/출산/영유아"
+        android:id="@+id/check1"
+        android:checked="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="청소년/아동"
+        android:id="@+id/check2"
+        android:checked="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="노인/당뇨/고혈압"
+        android:id="@+id/check3"
+        android:checked="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비만/운동교실"
+        android:id="@+id/check4"
+        android:checked="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="검진/강좌"
+        android:id="@+id/check5"
+        android:checked="true" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -18,7 +53,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="체크박스를 선택하세요"
             android:id="@+id/text" />
 
     </ScrollView>
