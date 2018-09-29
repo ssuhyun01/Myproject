@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     TextView text;
 
-    int [][] category = {
-            { 6818, 6847, 6881, 6924, 6938, 6955, 6998, 7009, 7023, 7044, 7045 },
-            { 6799, 6826, 6866, 6886, 6891, 6928, 6948, 6953, 6991, 7007, 7017, 7024, 7042 },
-            { 6833, 6834, 6871, 6880, 6896, 6944, 6966, 7029  },
-            { 6832, 6857, 6865, 6988 },
-            { 6853, 6897, 6913, 6917, 6939, 6962 }
+    String [][] category = {
+            { "임신", "출산", "영유아" },
+            { "청소년", "아동" },
+            { "노인", "당뇨", "고혈압" },
+            { "비만", "운동교실" },
+            { "검진", "강좌" }
     };
 
     CheckBox[] checkBox = new CheckBox[5];
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     for (int j = 0; j < checkBox.length; j++) {
                         if (checkBox[j].isChecked()) {
                             for (int k = 0; k < category[j].length; k++) {
-                                if (json3.getString("IDX").equals(Integer.toString(category[j][k]))) {
+                                if (json3.getString("TITLE").contains(category[j][k]) || json3.getString("CONTENT").contains(category[j][k])) {
                                     output += json3.getString("TITLE") + "\n" + json3.getString("CONTENT") + "\n\n";
                                 }
                             }
